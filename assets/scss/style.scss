@@ -3431,3 +3431,14 @@ div.ads {
 }
 
 /***********/
+.feature-img {
+  display: block;
+  width: 550px;
+  height: 412px;
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    min-height: 100%;
+  }
+}
