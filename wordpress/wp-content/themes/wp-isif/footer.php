@@ -1,11 +1,10 @@
     </div><!-- End container -->
   <a id="toTop " title="Наверх " style="display: none; "></a>
 </div><!-- End wrapper -->
-<div id="bottom ">
+<div id="bottom">
   <footer id="footer ">
     <div class="copyright ">
-        <p>© 1985-2015 <a href="http://isif-life.ru/ "><?php bloginfo('name'); ?></a><br>
-        Блог Александра Борисова</p>
+        <p>© 1985-2015 <a href="http://isif-life.ru/ "><?php bloginfo('name'); ?></a></p>
         <p>Товарищи! Я уже более 5 лет вкладываю душу в этот блог и у меня к вам обычная человеческая просьба - не воруйте контент! Спасибо большое!</p>
     </div>
 
@@ -27,8 +26,6 @@
     </div>
 
     <?php wp_footer(); ?>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/wp-embed.min.js"></script>
 
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 
