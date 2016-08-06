@@ -64,6 +64,12 @@
       </div>
     </nav>
     <div class="line_link_left"></div>
+    <div id="line_link_ads">
+      <div class="lb_link_block">
+      <div id="lb_link"> </div>
+      <div id="lb_link_add"> </div>
+      </div>
+    </div>
 
     <div id="container">
       <div id="content" itemscope="" itemtype="http://schema.org/WPHeader">

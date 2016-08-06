@@ -4,7 +4,7 @@
   <aside id="sidebar">
 
     <!-- Google search begin -->
-    <form action="http://www.google.ru/cse" id="cse-search-box" target="_blank">
+    <form action="<?php bloginfo('url'); ?>/" id="cse-search-box" target="_blank">
       <input type="text" placeholder="Поиск по блогу" class="search_field" name="q">
       <input type="submit" class="search_submit" name="sa" value="Найти">
     </form>
@@ -37,7 +37,14 @@
    </div>
    <!-- Feedburner end -->
 
+  <?php if ( is_active_sidebar('widgetarea1') ) : ?>
+    <?php dynamic_sidebar( 'widgetarea1' ); ?>
+  <?php else : ?>
 
+    <!-- If you want display static widget content - write code here
+    RU: Здесь код вывода того, что необходимо для статического контента виджетов -->
+
+  <?php endif; ?>
     <!-- Tabber begin -->
     <div class="box ">
        <ul class="category ">
