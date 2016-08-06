@@ -9,13 +9,6 @@
 
   <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
 
-
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/def.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/front.css" type="text/css" media="all">
-  <link href="<?php echo get_template_directory_uri(); ?>/css/wp-syntax.css" type="text/css" media="all">
-  <link type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/slicknav.css">
-
   <!-- icons -->
   <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
