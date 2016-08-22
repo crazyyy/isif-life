@@ -1,5 +1,5 @@
     </div><!-- End container -->
-  <a id="toTop " title="Наверх " style="display: none; "></a>
+  <a id="toTop" href="#" title="Наверх"></a>
 </div><!-- End wrapper -->
 <div id="bottom">
   <footer id="footer ">

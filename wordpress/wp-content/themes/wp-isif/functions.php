@@ -153,7 +153,7 @@ function wpeSideNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+    'items_wrap'      => '<ul id="menu-verxnee-mobilnoe-menyu" class="menu">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -164,7 +164,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 function register_html5_menu() {
   register_nav_menus(array(
     'header-menu' => __('Меню в шапке', 'wpeasy'),
-    'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
+    'sidebar-menu' => __('Адаптивное меню в шапку', 'wpeasy'),
     'footer-menu' => __('Меню в подвал', 'wpeasy')
   ));
 }
@@ -177,8 +177,8 @@ if (function_exists('register_sidebar')) {
     'id' => 'widgetarea1',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
   ));
   //  Define Sidebar Widget Area 2. If your want to display more widget - uncoment this
   /*
@@ -188,8 +188,8 @@ if (function_exists('register_sidebar')) {
     'id' => 'widgetarea2',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
   ));
   */
 }

@@ -21,9 +21,9 @@
 
   <!-- Begin postinfo -->
   <div class="post_info">
-    <div class="post_comments"><?php comments_popup_link( __( 'Leave your thoughts', 'wpeasy' ), __( '1 Comment', 'wpeasy' ), __( '% Comments', 'wpeasy' )); ?></div>
+    <div class="post_comments"><a href="<?php the_permalink(); ?>#comments">Оставить комментарий</a></div>
+    <div class="post_comments_count">Комментарии: <span class="com_count"><?php comments_popup_link( '0', __( '1', 'wpeasy' ), __( '% ', 'wpeasy' )); ?></span></div>
     <div class="post_cat">Рубрика: <span class="cat_name"><?php the_category(', '); // Separated by commas ?></span></div>
-  </div>
-  <!-- End postinfo -->
+  </div><!-- End postinfo -->
 
 <?php endwhile; endif; ?>

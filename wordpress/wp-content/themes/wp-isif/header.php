@@ -32,7 +32,7 @@
   <div id="wrapper">
     <header>
       <hgroup>
-        <h1 class="blog_name"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></h1>
+        <div  class="blog_name"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
         <h2 class="blog_descr"><?php bloginfo('description'); ?></h2></hgroup>
     </header>
 
@@ -43,7 +43,7 @@
         <span class="slogan"><?php bloginfo('description'); ?></span>
         <div class="search-form">
           <!-- Google search begin -->
-          <form action="http://www.google.ru/cse" id="cse-search-box" target="_blank">
+          <form action="#" id="cse-search-box" target="_blank">
             <fieldset>
               <input type="text" placeholder="Поиск" class="form-control" name="q" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;https://www.google.com/cse/static/ru/google_custom_search_watermark.gif&quot;) left center no-repeat rgb(255, 255, 255);">
               <input type="submit" class="btn-search" name="sa" value="Найти">
@@ -55,21 +55,58 @@
       </div>
     </header>
 
+
+    <nav class="main-nav">
+      <div class="menu-verxnee-container">
+        <div class="menu-verxnee-mobilnoe-menyu-container">
+          <?php wpeSideNav(); ?>
+        </div>
+      </div>
+    </nav>
+    <!-- adaptive -->
+
     <nav>
-      <a class="ribbon" href="http://isif-life.ru/shkola" title="Интересное на Isif-Life.ru"></a>
+      <a class="ribbon" href="#" title="Интересное"></a>
       <div id="access">
         <div class="menu-verxnee-container">
           <?php wpeHeadNav(); ?>
         </div>
       </div>
     </nav>
-    <div class="line_link_left"></div>
-    <div id="line_link_ads">
-      <div class="lb_link_block">
-      <div id="lb_link"> </div>
-      <div id="lb_link_add"> </div>
+
+    <div class="line_link_left"><?php
+      $fields = get_field('header_ad', 22);
+      $field_count = count($fields);
+      $array_number = $field_count - 1;
+      $random_number = rand(0, $array_number);
+      $field_link = $fields[$random_number]['link'];
+      $field_title = $fields[$random_number]['title'];
+    ?></div>
+
+    <?php if( $fields ): ?>
+      <div id="line_link_ads">
+        <div class="lb_link_block">
+          <div id="lb_link">
+            <span class="lb_link">
+              <a class="lb-hidden" href="<?php echo $field_link; ?>"><?php echo $field_title; ?></a>
+            </span>
+          </div>
+          <div id="lb_link_add">
+            <span class="lb_link">
+              <a class="lb-hidden-add" href="<?php the_field('header_right_link', 22); ?>"><?php the_field('header_right_title', 22); ?></a>
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
+
+    <?php else: ?>
+      <div id="line_link_ads">
+        <div class="lb_link_block">
+        <div id="lb_link"> </div>
+        <div id="lb_link_add"> </div>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <div id="container">
       <div id="content" itemscope="" itemtype="http://schema.org/WPHeader">

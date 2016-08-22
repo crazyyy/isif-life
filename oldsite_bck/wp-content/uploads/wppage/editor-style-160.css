@@ -1,0 +1,18 @@
+html{
+    background-color:#f1f1f1 !important;
+    background-image:url();
+    background-attachment:  !important;
+    background-repeat:  !important;
+    }
+    html .mcecontentbody{ max-width:1600px;}
+    body#tinymce{ width:720px!important;
+    border-color:#afafaf!important;
+    border-width:px!important;
+    border-style:solid!important;
+    background-color: #;
+    color:#;
+    box-shadow:0 5px px rgba(0,0,0, 1);
+    }
+    .ps_bonus_box_wide{ margin:10px -20px!important; width: 720px; }
+    .ps_bonus_box{ margin:10px 0px 10px -122px!important;}
+    .bonus_table_box_t{ margin:0 -20px!important; }

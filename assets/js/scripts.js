@@ -21,7 +21,7 @@ if (typeof jQuery === 'undefined') {
   console.log('jQuery has loaded');
 }
 // Place any jQuery/helper plugins in here.
-
+var $ = jQuery;
 /** main.js */
 function load_scripts_and_css(e) {
   var a = {};
@@ -1550,3 +1550,41 @@ Animate.prototype = {
     }
   }
 };
+jQuery(document).ready(function($) {
+  $('.post_author').each(function(index, el) {
+    var autorName = $(this).children('span').children('a').html();
+    $(this).children('span').html(autorName);
+  });
+  $('.widget').each(function(index, el) {
+    var titleContainer = $(this).children('h2');
+    if ( titleContainer.length == 0 ) {
+      $(this).css('padding-top', '15px');
+    }
+  });
+});
+
+
+$(function() {
+  $.fn.scrollToTop = function() {
+    $(this).hide().removeAttr("href");
+    if ($(window).scrollTop() != "0") {
+      $(this).fadeIn("slow")
+    }
+    var scrollDiv = $(this);
+    $(window).scroll(function() {
+      if ($(window).scrollTop() == "0") {
+        $(scrollDiv).fadeOut("slow")
+      } else {
+        $(scrollDiv).fadeIn("slow")
+      }
+    });
+    $(this).click(function() {
+      $("html, body").animate({
+        scrollTop: 0
+      }, "slow")
+    })
+  }
+});
+$(function() {
+  $("#toTop").scrollToTop();
+});
