@@ -31,9 +31,20 @@
 <body <?php body_class(); ?>>
   <div id="wrapper">
     <header>
-      <hgroup>
-        <div  class="blog_name"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
-        <h2 class="blog_descr"><?php bloginfo('description'); ?></h2></hgroup>
+
+      <?php if ( is_front_page() && is_home() ){ ?>
+        <hgroup>
+          <div  class="blog_name"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
+          <h2 class="blog_descr"><?php bloginfo('description'); ?></h2>
+        </hgroup>
+      <?php } else { ?>
+        <hgroup>
+          <div class="head_name">
+            <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+          </div>
+          <div class="blog_descr">Профессиональное <br>обучение блоггингу</div>
+        </hgroup>
+      <?php } ?>
     </header>
 
     <!-- adaptive -->

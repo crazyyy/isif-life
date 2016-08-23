@@ -2,6 +2,8 @@
   <!-- End content -->
 
   <aside id="sidebar">
+    <div style="margin-top: 20px; margin-bottom: 20px"><div align="center"></div></div>
+    <div align="center" style="padding-top: 30px"></div>
 
     <form method="get" class="sidebar_search" name="searchform" action="<?php bloginfo('url'); ?>/">
       <input type="text" value="" name="s" placeholder="Поиск по блогу" class="search_field" />
