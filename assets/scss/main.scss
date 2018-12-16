@@ -3508,7 +3508,7 @@ div.ads {
 .feature-img {
   display: block;
   overflow: hidden;
-
+max-width: 100%;
   width: 550px;
   height: 412px;
   margin: 0 auto;
@@ -4319,6 +4319,10 @@ aside {
         font: normal 12px Arial, sans-serif;
 
         color: #595959;
+      }
+      .comment-awaiting-moderation {
+        position: absolute;
+        top: 35px;
       }
       .comment-author {
         position: relative;

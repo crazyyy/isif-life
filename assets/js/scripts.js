@@ -1556,7 +1556,7 @@ jQuery(document).ready(function($) {
     $(this).children('span').html(autorName);
   });
   $('.widget').each(function(index, el) {
-    var titleContainer = $(this).children('h2');
+    var titleContainer = $(this).children('h6');
     if ( titleContainer.length == 0 ) {
       $(this).css('padding-top', '15px');
     }

@@ -34,7 +34,9 @@
 
       <?php if ( is_front_page() && is_home() ){ ?>
         <hgroup>
-          <div  class="blog_name"><a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
+          <h1 class="blog_name">
+            <a href="<?php echo home_url(); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+          </h1>
           <h2 class="blog_descr"><?php bloginfo('description'); ?></h2>
         </hgroup>
       <?php } else { ?>
@@ -50,7 +52,12 @@
     <!-- adaptive -->
     <header id="header">
       <div class="holder">
-        <strong class="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></strong>
+
+        <?php if ( is_front_page() && is_home() ){ ?>
+          <h1 class="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        <?php } else { ?>
+          <strong class="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></strong>
+        <?php } ?>
         <span class="slogan"><?php bloginfo('description'); ?></span>
         <div class="search-form">
           <!-- Google search begin -->
